@@ -26,19 +26,19 @@ A simple Django-based Calorie Counter web application that helps users monitor t
 
 ### 🏠 Homepage
 
-![Homepage](static/images/homepage.png)
+![Homepage](myapp/static/images/homepage.png)
 
 ---
 
 ### 🥗 Food Entry Page
 
-![Food Entry](static/images/foodentry.png)
+![Food Entry](myapp/static/images/foodentry.png)
 
 ---
 
 ### 📊 Dashboard Page
 
-![Dashboard](static/images/dashboard.png)
+![Dashboard](myapp/static/images/dashboard.png)
 
 ## Installation
 
