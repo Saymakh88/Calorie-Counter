@@ -17,19 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myapp import views
-from django.contrib.auth.views import LoginView, LogoutView
-from myapp.views import profile_view, signup_view
-from myapp.views import index
-
-
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
-    path('delete/<int:id>/',views.delete_consume,name="delete"),
-    path('profile/', profile_view, name='profile'),
-    path('login/', LoginView.as_view(template_name='myapp/login.html'), name='login'),
-    path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
-    path('signup/', signup_view, name='signup'),
+    path('calorie-plot/', views.calorie_trend_plot, name="calorie_plot"),
+    path('macro-pie/', views.macronutrient_pie_chart, name="macro_pie"), 
+    path('signup/', views.signup_view, name='signup'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'), 
+    path('delete/<int:id>/', views.delete_consume, name='delete_consume'),
+    path('edit/<int:id>/', views.edit_consume, name='edit_consume'),
+    path('add_custom_food/', views.add_custom_food, name='add_custom_food'),
+    
 ]
